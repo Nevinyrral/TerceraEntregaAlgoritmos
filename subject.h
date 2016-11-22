@@ -2,27 +2,30 @@
 #define SUBJECT_H
 
 #include <string>
-#include <vector>
+#include <map>
 #include "class.h"
 
 class Subject {
     private:
         // Instance variables
-        int id_subject;
+        std :: string id_subject;
         int credits; 
-        std :: vector<Class> classes;
+        std :: map<int, Class> classes;
         
     public:
         // Constructor
-        Subject (int id_subject, int credits);
+        Subject (std :: string id_subject, int credits);
     
         // Getters
-        int get_id_subject ();
+        std :: string get_id_subject ();
         int get_credits ();
-        std :: vector<Class> get_classes ();
+        std :: map<int, Class> get_classes ();
         
         // Setters
-        void set_id_subject (int id);
+        void set_id_subject (std :: string id);
         void set_credits (int credits);
-        void set_classes (std :: vector<Class> classes);
-}
+        void set_classes (std :: map<int, Class> classes);
+	void add_class (Class klass);
+};
+
+#endif

@@ -16,7 +16,7 @@ class Class {
     
     public:
         // Constructor
-        Class (int id_class, int start_time, int capacity, std :: string teacher);
+        Class (int id_class, int start_time, int end_time, int capacity, std :: string teacher);
         
         // Getters
         int get_id_class ();
@@ -32,6 +32,8 @@ class Class {
         void set_end_time (int end_time);
         void set_days (std :: set<int> days);
         void set_teacher (std :: string teacher);
-}
+	void set_capacity (int capacity);
+	void add_day (int day);
+};
 
 #endif
