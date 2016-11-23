@@ -1,13 +1,13 @@
 #include "subject.h"
 
 // Constructor
-Subject :: Subject (std :: string id_subject, int credits) {
+Subject :: Subject (int id_subject, int credits) {
     set_id_subject (id_subject); 
     set_credits (credits);
 }
 
 // Setters
-void Subject :: set_id_subject (std :: string id_subject) {
+void Subject :: set_id_subject (int id_subject) {
     this -> id_subject = id_subject;     
 }
 
@@ -24,7 +24,7 @@ void Subject :: add_class (Class klass) {
 }
 
 // Getters
-std :: string Subject :: get_id_subject () {
+int Subject :: get_id_subject () {
     return this -> id_subject;
 }
 

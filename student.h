@@ -11,7 +11,7 @@ class Student {
         int id_student;
         int approved_credits;
         int available_credits;
-        std :: vector<std::string> subjects;
+        std :: vector<int> subjects;
     
     public:
         // Constructor
@@ -21,14 +21,14 @@ class Student {
         int get_id_student ();
         int get_approved_credits ();
         int get_available_credits ();
-        std :: vector<std::string> get_subjects ();
+        std :: vector<int> get_subjects ();
         
         // Setters
         void set_id_student (int id_student);
         void set_approved_credits (int approved_credits);
         void set_available_credits (int available_credits);
-        void set_subjects (std :: vector<std::string> subjects);
-	void add_subject (std :: string subject_id);
+        void set_subjects (std :: vector<int> subjects);
+	    void add_subject (int subject_id);
 };
 
 #endif

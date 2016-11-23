@@ -16,7 +16,7 @@ int Student::get_approved_credits (){
 int Student::get_available_credits (){
 	return this -> available_credits;
 }
-std::vector<std::string> Student::get_subjects (){
+std::vector<int> Student::get_subjects (){
 	return this -> subjects;
 }
 
@@ -30,9 +30,9 @@ void Student::set_approved_credits (int approved_credits){
 void Student::set_available_credits (int available_credits){
 	this -> available_credits = available_credits;
 }
-void Student::set_subjects(std::vector<std::string> subjects){
+void Student::set_subjects(std::vector<int> subjects){
 	this -> subjects = subjects;
 }
-void Student::add_subject(std::string sub){
+void Student::add_subject(int sub){
 	this -> subjects.push_back(sub);
 }

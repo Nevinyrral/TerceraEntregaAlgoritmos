@@ -1,5 +1,6 @@
-#include "class.h"
 #include <string>
+#include "class.h"
+
 
 // Constructor
 Class :: Class (int id_class, int start_time, int end_time, int capacity, std :: string teacher) {
