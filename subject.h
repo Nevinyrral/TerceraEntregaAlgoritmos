@@ -20,6 +20,7 @@ class Subject {
         int get_id_subject ();
         int get_credits ();
         std :: map<int, Class> get_classes ();
+        Class* get_class (int id);
         
         // Setters
         void set_id_subject (int id);

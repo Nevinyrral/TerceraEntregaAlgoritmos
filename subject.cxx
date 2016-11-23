@@ -36,4 +36,8 @@ std :: map<int, Class> Subject :: get_classes () {
     return this -> classes; 
 }
 
+Class* Subject :: get_class (int id) {
+    return this -> classes[id]; 
+}
+
 

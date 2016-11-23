@@ -32,8 +32,8 @@ class Class {
         void set_end_time (int end_time);
         void set_days (std :: set<int> days);
         void set_teacher (std :: string teacher);
-	void set_capacity (int capacity);
-	void add_day (int day);
+    	void set_capacity (int capacity);
+	    void add_day (int day);
 };
 
 #endif
