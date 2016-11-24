@@ -40,6 +40,7 @@ void scheduler (Pagr *pr) {
 	std :: set<int> day;
 	Schedule schedule (7, day);
 	std::vector<Student> aux = pr->getEstTot();
+	std::map<int,Subject> auxSub = pr -> getMateriasTot();
 	for(int k =0; k<aux.size();k++){
 		std :: vector<int> student_subjects = aux[k].get_subjects();
 		int class_counter = 0;
@@ -51,8 +52,7 @@ void scheduler (Pagr *pr) {
 				int rm = student_subjects.size();
 				int random_subject = rand() % rm + 0;
 				int subject_id = student_subjects[random_subject];
-				std::map<int,Subject> auxSub = pr->getMateriasTot();
-				Subject sub = auxSub.find(subject_id)->second;
+				Subject sub = auxSub.find(subject_id) -> second;
 				if (current_credits - sub.get_credits() >= 0) {
 					std::map<int,Class> auxClas = sub.get_classes();
 					std::map<int,Class>::iterator itC = auxClas.begin();
@@ -63,7 +63,7 @@ void scheduler (Pagr *pr) {
 						std::set<int> new_schedule_for_day = schedule[itC -> second.get_day()];
 						int start_aux_time = itC -> second.get_start_time();
 						int end_aux_time = itC -> second.get_end_time();
-						if (valid_class && hours.find(start_aux_time) == hours.end() && hours.find(end_aux_time) == hours.end()) {
+						if (valid_class && hours.find(start_aux_time) == hours.end() && hours.find(end_aux_time) == hours.end() && itC -> second.get_capacity() > 0) {
 							new_schedule_for_day.insert(start_aux_time);
 							new_schedule_for_day.insert(end_aux_time);
 							for (int j = start_aux_time + 1; j < end_aux_time; j++) {
@@ -77,6 +77,7 @@ void scheduler (Pagr *pr) {
 							if(valid_class) {
 								results.push_back (itC -> second.get_id_class());
 								schedule[itC -> second.get_day()] = new_schedule_for_day;
+								auxSub.find(subject_id) -> second.get_classes().find(itC -> second.get_id_class()) -> second.set_capacity(itC -> second.get_capacity() - 1);
 								current_credits -= sub.get_credits();
 								class_added = true;
 							}
