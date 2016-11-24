@@ -37,11 +37,11 @@ int main (int argc, char** argv) {
 }//FIN MAIN
 
 void scheduler (Pagr *pr) {
-	std :: set<int> day;
-	Schedule schedule (7, day);
 	std::vector<Student> aux = pr->getEstTot();
 	std::map<int,Subject> auxSub = pr -> getMateriasTot();
 	for(int k =0; k<aux.size();k++){
+		std :: set<int> day;
+		Schedule schedule (7, day);
 		std :: vector<int> student_subjects = aux[k].get_subjects();
 		int class_counter = 0;
 		int current_credits = aux[k].get_available_credits();
