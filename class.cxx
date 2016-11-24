@@ -24,8 +24,8 @@ void Class :: set_end_time (int end_time) {
   this -> end_time = end_time;
 }
 
-void Class :: set_days (std :: set<int> days) {
-  this -> days = days;
+void Class :: set_day (int day) {
+  this -> day = day;
 }
 
 void Class :: set_teacher (std :: string teacher) {
@@ -34,10 +34,6 @@ void Class :: set_teacher (std :: string teacher) {
 
 void Class :: set_capacity (int capacity) {
   this -> capacity = capacity;
-}
-
-void Class :: add_day (int day) {
-	this -> days.insert(day);
 }
 
 // Getters
@@ -57,8 +53,8 @@ int Class :: get_capacity () {
   return this -> capacity;
 }
 
-std :: set<int> Class :: get_days () {
-  return this -> days;
+int Class :: get_day () {
+  return this -> day;
 }
 
 std :: string Class :: get_teacher () {

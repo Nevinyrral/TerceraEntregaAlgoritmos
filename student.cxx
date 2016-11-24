@@ -19,6 +19,9 @@ int Student::get_available_credits (){
 std::vector<int> Student::get_subjects (){
 	return this -> subjects;
 }
+std::vector<int> Student::getClasesIns(){
+	return this-> codClasesIns;
+}
 
 // Setters
 void Student::set_id_student (int id_student){
@@ -35,4 +38,7 @@ void Student::set_subjects(std::vector<int> subjects){
 }
 void Student::add_subject(int sub){
 	this -> subjects.push_back(sub);
+}
+void Student::setClasesIns(std::vector<int> v){
+	 this-> codClasesIns = v;
 }

@@ -2,13 +2,13 @@
 
 // Constructor
 Subject :: Subject (int id_subject, int credits) {
-    set_id_subject (id_subject); 
+    set_id_subject (id_subject);
     set_credits (credits);
 }
 
 // Setters
 void Subject :: set_id_subject (int id_subject) {
-    this -> id_subject = id_subject;     
+    this -> id_subject = id_subject;
 }
 
 void Subject :: set_credits (int credits) {
@@ -29,15 +29,13 @@ int Subject :: get_id_subject () {
 }
 
 int Subject :: get_credits () {
-    return this -> credits; 
+    return this -> credits;
 }
 
 std :: map<int, Class> Subject :: get_classes () {
-    return this -> classes; 
+    return this -> classes;
 }
 
-Class* Subject :: get_class (int id) {
-    return this -> classes[id]; 
-}
-
-
+// Class* Subject :: get_class (int id) {
+//    return this -> classes[id];
+// }

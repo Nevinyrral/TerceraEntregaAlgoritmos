@@ -1,1 +1,3 @@
-# TerceraEntregaAlgoritmos \n Aca van las instrucciones
+# TerceraEntregaAlgoritmos 
+
+Compilar con make all, uso: ./scheduler input_file

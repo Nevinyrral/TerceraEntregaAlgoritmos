@@ -9,19 +9,19 @@ class Subject {
     private:
         // Instance variables
         int id_subject;
-        int credits; 
+        int credits;
         std :: map<int, Class> classes;
-        
+
     public:
         // Constructor
         Subject (int id_subject, int credits);
-    
+
         // Getters
         int get_id_subject ();
         int get_credits ();
         std :: map<int, Class> get_classes ();
-        Class* get_class (int id);
-        
+        // Class* get_class (int id);
+
         // Setters
         void set_id_subject (int id);
         void set_credits (int credits);
